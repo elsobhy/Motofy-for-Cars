@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motofy for Cars</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://www.pexels.com/favicon.ico">
+</head>
+<body>
+    <video autoplay muted loop id="background-video" poster="lambo.jpg">
+        <source src="myvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="navbar">
+        <div class="logo">Motofy for Cars</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+    <header id="home">
+        <h1>Motofy for Cars</h1>
+        <p>Unleash Your Drive with Unmatched Luxury</p>
+    </header>
+    <section id="features">
+        <h2>Why Choose Motofy for Cars?</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-car fa-3x"></i>
+                <h3>Luxury Cars</h3>
+                <p>Explore our premium collection of high-performance vehicles.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt fa-3x"></i>
+                <h3>Fast Booking</h3>
+                <p>Book your dream car in just a few clicks.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset fa-3x"></i>
+                <h3>Premium Support</h3>
+                <p>24/7 customer support for a seamless experience.</p>
+            </div>
+        </div>
+    </section>
+    <main id="cars">
+        <h2>Our Collection</h2>
+        <div class="car-container">
+            <!-- Car 1 -->
+            <div class="car-card" style="--i: 1">
+                <img src="lambo.jpg" alt="Lamborghini Aventador">
+                <div class="car-info">
+                    <h2>Lamborghini Aventador</h2>
+                    <p><strong>Model:</strong> 2023</p>
+                    <p><strong>Price:</strong> $500,000</p>
+                    <p><strong>Specs:</strong> V12 engine, 770 HP, 0-100 km/h in 2.8 seconds</p>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 2 -->
+            <div class="car-card" style="--i: 2">
+                <img src="rolls.jpg" alt="Rolls-Royce Phantom">
+                <div class="car-info">
+                    <h2>Rolls-Royce Phantom</h2>
+                    <p><strong>Model:</strong> 2024</p>
+                    <p><strong>Price:</strong> $600,000</p>
+                    <p><strong>Specs:</strong> V12 engine, 563 HP, luxurious interior</p>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 3 -->
+            <div class="car-card" style="--i: 3">
+                <img src="ferrari.jpg" alt="Ferrari SF90 Stradale">
+                <div class="car-info">
+                    <h2>Ferrari SF90 Stradale</h2>
+                    <p><strong>Model:</strong> 2023</p>
+                    <p><strong>Price:</strong> $625,000</p>
+                    <p><strong>Specs:</strong> Hybrid V8, 986 HP, 0-100 km/h in 2.5 seconds</p>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 4 -->
+            <div class="car-card" style="--i: 4">
+                <img src="bugatti.jpg" alt="Bugatti Chiron">
+                <div class="car-info">
+                    <h2>Bugatti Chiron</h2>
+                    <p><strong>Model:</strong> 2023</p>
+                    <p><strong>Price:</strong> $3,000,000</p>
+                    <p><strong>Specs:</strong> W16 engine, 1500 HP, top speed 420 km/h</p>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 5 -->
+            <div class="car-card" style="--i: 5">
+                <img src="aston.jpg" alt="Aston Martin DBS">
+                <div class="car-info">
+                    <h2>Aston Martin DBS</h2>
+                    <p><strong>Model:</strong> 2024</p>
+                    <p><strong>Price:</strong> $333,000</p>
+                    <p><strong>Specs:</strong> V12 engine, 715 HP, 0-100 km/h in 3.4 seconds</p>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Car 6 -->
+            <div class="car-card" style="--i: 6">
+                <img src="mclaren.jpg" alt="McLaren 720S">
+                <div class="car-info">
+                    <h2>McLaren 720S</h2>
+                    <p><strong>Model:</strong> 2023</p>
+                    <p><strong>Price:</strong> $310,000</p>
+                    <p><strong>Specs:</strong> V8 engine, 710 HP, 0-100 km/h in 2.9 seconds</p>
+                    <a href="#contact" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="book-btn">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script>
+        // Toggle hamburger menu on mobile
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Smooth scrolling for nav links with offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const offset = document.querySelector('.navbar').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: elementPosition - offset,
+                        behavior: 'smooth'
+                    });
+                    // Highlight Contact section
+                    if (targetId === 'contact') {
+                        targetElement.classList.add('highlight');
+                        setTimeout(() => targetElement.classList.remove('highlight'), 1000);
+                    }
+                }
+            });
+        });
+
+        // Intersection Observer for slide-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    const index = parseInt(card.style.getPropertyValue('--i'));
+                    card.classList.add(index % 2 === 0 ? 'slide-in-right' : 'slide-in-left');
+                    observer.unobserve(card);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.car-card, .feature-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
