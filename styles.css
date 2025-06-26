@@ -93,6 +93,7 @@ body::before {
     display: none;
     font-size: 1.8em;
     cursor: pointer;
+    color: white;
 }
 
 /* Header styling */
@@ -382,8 +383,8 @@ footer {
 /* Responsive design */
 @media (max-width: 768px) {
     .car-card {
-        max-width: 90%;
-        height: 300px;
+        max-width: 700px;
+        height: 400px;
     }
 
     .nav-links {
