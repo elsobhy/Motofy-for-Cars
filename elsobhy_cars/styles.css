@@ -1,0 +1,432 @@
+/* General page settings */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    direction: ltr;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+}
+
+/* Background video styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Fade-in animation for video */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Parallax effect for background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transform: translateZ(-1px) scale(1.1);
+}
+
+/* Navigation bar styling */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e63946;
+    text-shadow: 0 0 10px rgba(230, 57, 70, 0.5);
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(230, 57, 70, 0.8);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #e63946;
+    transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 100px 20px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-top: 80px;
+    animation: slideInHeader 1s ease;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 0;
+    color: #e63946;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+@keyframes slideInHeader {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Features section */
+#features {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#features h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-card {
+    width: 250px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.feature-card i {
+    color: #e63946;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.feature-card p {
+    font-size: 1em;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Car section */
+#cars {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#cars h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.car-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Car card styling */
+.car-card {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    border: 3px solid #e63946;
+    opacity: 0;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(230, 57, 70, 0.5);
+}
+
+/* Slide-in animations */
+.slide-in-left {
+    animation: slideInLeft 0.7s ease forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.7s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-150px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(150px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Image styling */
+.car-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Car info styling */
+.car-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    color: white;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.car-card:hover .car-info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Show info on hover */
+.car-card:hover img {
+    transform: scale(1.15);
+}
+
+/* Text formatting */
+.car-info h2 {
+    margin: 0 0 15px;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.car-info p {
+    margin: 8px 0;
+    font-size: 1.2em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Book Now button */
+.book-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
+
+/* Pulse animation for button */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(230, 57, 70, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(230, 57, 70, 0.7); }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(230, 57, 70, 0.5); }
+}
+
+.book-btn:hover {
+    background: #d00000;
+    animation-play-state: paused;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.8);
+}
+
+/* Contact section */
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 2px solid #e63946;
+    border-radius: 5px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    align-self: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+    color: white;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e63946;
+    transform: scale(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .car-card {
+        max-width: 90%;
+        height: 300px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(26, 26, 26, 0.9);
+        width: 200px;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .car-info h2 {
+        font-size: 1.6em;
+    }
+
+    .car-info p {
+        font-size: 1em;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .feature-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .car-info {
+        padding: 20px;
+    }
+}
