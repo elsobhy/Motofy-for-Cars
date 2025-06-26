@@ -130,18 +130,20 @@
     </section>
     <footer>
         <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/i.elsob7y?igsh=dXdreTNwYTkyNDJ3" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1BB8WBfkEH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/mor7aq?t=1DO5z6-o8KpOq_rc-FzxSA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
     <script>
         // Toggle hamburger menu on mobile
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
 
         // Smooth scrolling for nav links with offset
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -156,7 +158,6 @@
                         top: elementPosition - offset,
                         behavior: 'smooth'
                     });
-                    // Highlight Contact section
                     if (targetId === 'contact') {
                         targetElement.classList.add('highlight');
                         setTimeout(() => targetElement.classList.remove('highlight'), 1000);
