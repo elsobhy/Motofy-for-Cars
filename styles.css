@@ -430,7 +430,7 @@ footer {
     }
 }
 
-/* ========== Custom Style for External Car Pages ========== */
+/* Custom Style for External Car Pages */
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
@@ -649,4 +649,116 @@ footer {
         font-size: 0.9em;
         padding: 10px 20px;
     }
+}
+/* Login Page Styling */
+.login-container {
+  max-width: 400px;
+  margin: 150px auto 60px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #e63946;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form .book-btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.signup-link {
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Make sure footer sticks to bottom even with short content */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.95);
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: color 0.3s ease;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li a:hover {
+    color: #e63946;
+  }
+}
+
+/* Ensure the active ingredient is prominent */
+.nav-links li a.active {
+  color: #e63946;
+  font-weight: bold;
+  pointer-events: auto;
+  opacity: 1;
 }
