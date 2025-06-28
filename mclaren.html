@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McLaren 720S - Motofy for Cars</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+  <video autoplay muted loop id="background-video" poster="mclaren.jpg">
+    <source src="myvideo.mp4" type="video/mp4" />
+  </video>
+
+  <nav class="navbar">
+    <div class="logo">Motofy for Cars</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#cars">Cars</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+    <div class="hamburger">☰</div>
+  </nav>
+
+  <div class="car-details">
+    <img src="mclaren.jpg" alt="McLaren 720S" />
+    <h2>McLaren 720S</h2>
+    <p><strong>Model:</strong> 2023</p>
+    <p><strong>Price:</strong> $310,000</p>
+    <p><strong>Basic Specs:</strong> V8 engine, 710 HP, 0-100 km/h in 2.9 seconds</p>
+    <p><strong>Top Speed:</strong> 341 km/h</p>
+    <p><strong>Acceleration:</strong> 0-100 km/h in 2.9 seconds</p>
+    <p><strong>Weight:</strong> 1,419 kg</p>
+    <button class="book-btn">Book Now</button>
+  </div>
+
+  <div class="features-section">
+    <h3>Features of McLaren 720S</h3>
+    <ul>
+      <li>Twin-turbo V8 engine</li>
+      <li>Carbon fiber MonoCage II chassis</li>
+      <li>Active aerodynamics with airbrake</li>
+      <li>Advanced suspension with Proactive Chassis Control</li>
+      <li>Premium Bowers & Wilkins audio system</li>
+    </ul>
+  </div>
+
+  <div class="availability">
+    <h3>Availability</h3>
+    <p>Available now in showrooms in Dubai and Monaco. Contact us to schedule a test drive!</p>
+    <p><strong>Note:</strong> Custom orders may take 3–5 months for delivery.</p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/i.elsob7y" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1BB8WBfkEH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/mor7aq" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lamborghini Aventador - Motofy for Cars</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+
+  <video autoplay muted loop id="background-video" poster="lambo.jpg">
+    <source src="myvideo.mp4" type="video/mp4" />
+  </video>
+
+  <nav class="navbar">
+    <div class="logo">Motofy for Cars</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#cars">Cars</a></li>
+      <li><a href="index.html#contact">Contact Us</a></li>
+    </ul>
+    <div class="hamburger">☰</div>
+  </nav>
+
+  <div class="car-details">
+    <img src="lambo.jpg" alt="Lamborghini Aventador" />
+    <h2>Lamborghini Aventador</h2>
+    <p><strong>Model:</strong> 2023</p>
+    <p><strong>Price:</strong> $500,000</p>
+    <p><strong>Basic Specs:</strong> V12 engine, 770 HP, 0-100 km/h in 2.8 seconds</p>
+    <p><strong>Top Speed:</strong> 350 km/h</p>
+    <p><strong>Acceleration:</strong> 0-100 km/h in 2.8 seconds</p>
+    <p><strong>Weight:</strong> 1,575 kg</p>
+    <button class="book-btn">Book Now</button>
+  </div>
+
+  <div class="features-section">
+    <h3>Features of Lamborghini Aventador</h3>
+    <ul>
+      <li>Advanced aerodynamics with ALA system</li>
+      <li>Carbon fiber monocoque chassis</li>
+      <li>Customizable driving modes</li>
+      <li>High-performance Brembo brakes</li>
+      <li>Signature scissor doors</li>
+    </ul>
+  </div>
+
+  <div class="availability">
+    <h3>Availability</h3>
+    <p>Available now in showrooms in Dubai and New York. Contact us to schedule a test drive!</p>
+    <p><strong>Note:</strong> Custom orders may take 4-8 months for delivery.</p>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/i.elsob7y" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1BB8WBfkEH/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/mor7aq" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    }
+  </script>
+</body>
+</html>
