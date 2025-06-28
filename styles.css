@@ -21,13 +21,11 @@ body {
     animation: fadeIn 2s ease-in;
 }
 
-/* Fade-in animation for video */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-/* Parallax effect for background */
 body::before {
     content: '';
     position: fixed;
@@ -197,7 +195,6 @@ header p {
     margin: 0 auto;
 }
 
-/* Car card styling */
 .car-card {
     position: relative;
     width: 100%;
@@ -216,7 +213,6 @@ header p {
     box-shadow: 0 15px 30px rgba(230, 57, 70, 0.5);
 }
 
-/* Slide-in animations */
 .slide-in-left {
     animation: slideInLeft 0.7s ease forwards;
 }
@@ -235,7 +231,6 @@ header p {
     to { transform: translateX(0); opacity: 1; }
 }
 
-/* Image styling */
 .car-card img {
     width: 100%;
     height: 100%;
@@ -243,7 +238,6 @@ header p {
     transition: transform 0.5s ease;
 }
 
-/* Car info styling */
 .car-info {
     position: absolute;
     top: 0;
@@ -267,12 +261,10 @@ header p {
     transform: translateY(0);
 }
 
-/* Show info on hover */
 .car-card:hover img {
     transform: scale(1.15);
 }
 
-/* Text formatting */
 .car-info h2 {
     margin: 0 0 15px;
     font-size: 2em;
@@ -286,8 +278,7 @@ header p {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-/* Book Now button */
-.book-btn {
+.book-btn, .car-details button {
     display: inline-block;
     padding: 12px 25px;
     background: #e63946;
@@ -298,16 +289,19 @@ header p {
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: pulse 1.5s infinite;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
 }
 
-/* Pulse animation for button */
 @keyframes pulse {
     0% { transform: scale(1); box-shadow: 0 0 0 rgba(230, 57, 70, 0.5); }
     50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(230, 57, 70, 0.7); }
     100% { transform: scale(1); box-shadow: 0 0 0 rgba(230, 57, 70, 0.5); }
 }
 
-.book-btn:hover {
+.book-btn:hover,
+.car-details button:hover {
     background: #d00000;
     animation-play-state: paused;
     box-shadow: 0 0 20px rgba(230, 57, 70, 0.8);
@@ -433,5 +427,226 @@ footer {
 
     .car-info {
         padding: 20px;
+    }
+}
+
+/* ========== Custom Style for External Car Pages ========== */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    direction: ltr;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+}
+
+/* Background video styling */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    transform: translateZ(-1px) scale(1.1);
+}
+
+/* Navigation bar styling */
+.navbar {
+    background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e63946;
+    transform: scale(1.1);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    background: rgba(230, 57, 70, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* External car pages navbar fix */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e63946;
+}
+
+/* Car Details Page */
+.car-details {
+    max-width: 900px;
+    margin: 100px auto 40px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.car-details img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    transition: transform 0.5s ease;
+}
+
+.car-details img:hover {
+    transform: scale(1.02);
+}
+
+.car-details h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #e63946;
+}
+
+.car-details p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.car-details .book-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 40px auto 0;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.car-details .book-btn:hover {
+    background: #d00000;
+    animation-play-state: paused;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.8);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(230, 57, 70, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(230, 57, 70, 0.7); }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(230, 57, 70, 0.5); }
+}
+
+/* Features and availability sections */
+.features-section,
+.availability {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    color: white;
+}
+
+.features-section h3,
+.availability h3 {
+    color: #e63946;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.features-section ul {
+    list-style: disc;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.features-section li,
+.availability p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+    color: white;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .car-details h2 {
+        font-size: 2em;
+    }
+
+    .car-details p {
+        font-size: 1em;
+    }
+
+    .car-details .book-btn {
+        font-size: 0.9em;
+        padding: 10px 20px;
     }
 }
